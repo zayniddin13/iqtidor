@@ -1,0 +1,278 @@
+{
+  "uz": {
+    "language": {
+      "lang": "O'zbekcha",
+      "shortLang": "O'z",
+      "flag": "/images/uzbek.svg"
+    },
+    "navbar": {
+      "courses": "Kurslarimiz",
+      "about": "Akademiya haqida",
+      "apply": "Ariza qoldirish"
+    },
+    "mainCopmponent": {
+      "agree_with": "Bu {agree_with_title} emas,",
+      "agree_with_title": "mo‘jiza",
+      "this": "bu",
+      "aboutYourself": "Kurslarimizga yozilish uchun, o‘zingiz haqingizda ma’lumotni kiritib ariza qoldiring.",
+      "checking": "Sertifikat xolatini tekshirish"
+    },
+    "goal": {
+      "today": "{today_title} kun o’rganuvchilari,",
+      "today_title": "Bugungi",
+      "tommorow": "{tommorow_title} kun egalari.",
+      "tommorow_title": "Ertangi",
+      "talent": "{talent_title} bilan kelajakga qadam bosing!",
+      "talent_title": "Iqtidor",
+      "goal-about": "Ertangi kun egalari bo‘lish uchun bugundan o‘rganish darkor! Biz bilan kelajak kasblarini o‘rganing! IT sohalari bir-biriga juda hamohang bo‘lib siz bir sohani o‘zlashtirish jarayonini o‘zida bir necha boshqa sohalar haqida kerakli bilimlarni bir vaqtning o‘zida o‘zlashtirib borasiz."
+    },
+    "mentors": {
+      "title": "Mentorlarimiz"
+    },
+    "signUpCourse": {
+      "title": "Kurslarimizga yoziling!",
+      "fullName": "Ism va Familiyangiz",
+      "phoneNumber": "Telefon raqamingiz",
+      "placeholder": "Ism va Familyangizni kiriting",
+      "agreement": "Ariza qoldirishda oferta shartlariga rozilik bildiraman",
+      "sending": "Yuborish",
+      "complete": "Malumotlarni Kiriting!"
+    },
+    "succes-modal": {
+      "title": "So‘rovingiz qabul qilindi!",
+      "about": "Bizning xodimlar uzog‘i 3 kun ichida siz bilan bog‘lanishadi",
+      "go-back": "Orqaga qaytish"
+    },
+    "socialSection": {
+      "instagram": "Instagram sahifasimizga obuna bo‘ling",
+      "telegram": "Telegram sahifasimizga obuna bo‘ling"
+    },
+    "titles": {
+      "graduate": "Bitiruvchilarimizning ish joylari",
+      "partners": "Bizning hamkorlar",
+      "courses": "Bizning Kurslar",
+      "whatAwaitsyou": "Nimalar sizni kutmoqda?",
+      "coursePrograms": "Kurs dasturi",
+      "teachers": "O‘qituvchilarimiz",
+      "complete": "Kursni tamomlagandan so‘ng {complete-add}?",
+      "complete-add": "qanday bilimlarga ega bo‘lasiz",
+      "verification": "Sertifikatni tekshirish",
+      "certificat": "SERTIFIKAT"
+    },
+    "mainAbout": {
+      "title": "Akademiya {title-addition}",
+      "title-addition": "Haqida",
+      "first-cont": "“Iqtidor” maktabi o‘quv markazi tashkil topshiga eng asosiy sabab bu O‘zbekston davlatida IT sohasiga bo‘lgan talab kuchayib borayotgani hamda bu sanoat tarmog‘idagi mutaxassislar yetishmovchiligi asosiy sabab bo‘lgan.",
+      "second-cont": "Markazning maqasadi - IT sohasini har bir yo‘nalishi bo‘ycha yetuk va mukammal tajribga ega bo‘lgan mutaxassislarni yetishtirib chiqarish. Bizning markazimizda sizni nafaqat akademik ta‘lim balki amaliy tajribalardan tortib o‘z sohasi yetuk mutaxassislaridan master-klass dasturlari kurmoqda. Bundan tashqari sizlar uchun open-space yartilgan bo‘lib sizlar darsdan tashqari markazning o‘zida o‘tirib boshqa gurug  o‘quvchilari bilan birga ishlash yani tajriba almashish bilan cheklanib qolmay IT yo‘nalishining u yoki bu soha vakillaridan ko‘plab do‘stlar ortirishingiz mumkin"
+    },
+    "footer": {
+      "aboutUs": "Iqtidor IT Academy — professional darajadagi yangi bilimlar markazi. Keling va kelajagingizni biz bilan birga quring!",
+      "prevented": "Barcha huquqlar himoyalangan",
+      "aboutAcademy": "Akademiya haqida",
+      "courses": "Kurslarimiz",
+      "developedBy": "Sayt ishlab chiqaruvchisi:"
+    },
+    "noData": {
+      "noData": "{noData-mainPage} qaytish yoki {connect}",
+      "noData-mainPage": "Asosiy sahifaga",
+      "connect": "biz bilan bog‘lanish"
+    },
+    "button": {
+      "apply": "Kursga yozilish",
+      "checking-again": "Qaytadan tekshirish"
+    },
+    "sertificat": {
+      "checking-about": "Kursni tugatganlik haqidagi sertifikatni haqiqiy ekanligini tekshirish uchun sertifikatga tegishli maxsus kodni kiriting.",
+      "certificat-code": "Sertifikat kodi",
+      "correct-certificat": "Siz kiritgan {certificat-id} raqamli sertifikat haqiqiy",
+      "certificat-id": "",
+      "checked-name": "{name} sertifikatingiz haqiqiyligi tekshirildi",
+      "name": "",
+      "incorrect-sertificat": "Siz kiritgan {certificat-id} raqamli sertifikat ma'lumotlar omboridan topilmadi"
+    }
+  },
+  "ru": {
+    "language": {
+      "lang": "Русский",
+      "shortLang": "Ру",
+      "flag": "/images/rus.svg"
+    },
+    "navbar": {
+      "courses": "Наши курсы",
+      "about": "Об академии",
+      "apply": "Подавать заявление"
+    },
+    "mainCopmponent": {
+      "agree_with": "Это не {agree_with_title} ",
+      "agree_with_title": "чудо",
+      "this": "это",
+      "aboutYourself": "Чтобы записаться на наши курсы, заполните заявку с информацией о себе.",
+      "checking": "Проверить статус сертификата"
+    },
+    "goal": {
+      "today": "{today_title} ученики",
+      "today_title": "Сегодняшние",
+      "tommorow": "{tommorow_title} завтрашнего дня.",
+      "tommorow_title": "Надежды",
+      "talent": "{talent_title} в будущее с Iqtidor!",
+      "talent_title": "Шагните",
+      "goal-about": "Чтобы стать владельцем завтрашнего дня, нужно учиться у сегодняшнего дня! Осваивайте будущие профессии вместе с нами! Сферы ИТ очень взаимосвязаны, и в процессе освоения одной области вы одновременно приобретаете необходимые знания о нескольких других областях."
+    },
+    "mentors": {
+      "title": "Наши наставники"
+    },
+    "signUpCourse": {
+      "title": "Запишитесь на наши курсы!",
+      "fullName": "Ваше имя и фамилия",
+      "phoneNumber": "Ваш номер телефона",
+      "placeholder": "Введите свое имя и фамилию",
+      "agreement": "Оставляя заявку, я соглашаюсь с условиями оферты",
+      "sending": "Отправка",
+      "complete": "Введите вашу информацию!"
+    },
+    "succes-modal": {
+      "title": "Ваш запрос принят!",
+      "about": "Наши сотрудники свяжутся с вами в течение 3 дней",
+      "go-back": "Возвращаться"
+    },
+    "socialSection": {
+      "instagram": "Подпишитесь на нашу страницу в Instagram",
+      "telegram": "Подпишитесь на нашу страницу в Telegram"
+    },
+    "titles": {
+      "graduate": "Работа наших выпускников",
+      "partners": "Наши партнеры",
+      "courses": "Наши Курсы",
+      "whatAwaitsyou": "Что вас ждет?",
+      "coursePrograms": "Программа курса",
+      "teachers": "Наши учителя",
+      "complete": "Какие знания {complete-add}?",
+      "complete-add": " вы получите после прохождения курса",
+      "verification": "Проверка сертификата",
+      "certificat": "СЕРТИФИКАТ"
+    },
+    "footer": {
+      "aboutUs": "Iqtidor IT-академия — центр новых знаний профессионального уровня. Постройте свое будущее вместе с нами!",
+      "prevented": "Все права защищены",
+      "aboutAcademy": "Об академии",
+      "courses": "Наши курсы",
+      "developedBy": "Сайт разработан:"
+    },
+    "mainAbout": {
+      "title": "{title-addition} Akademiya ",
+      "title-addition": "о",
+      "first-cont": "“Основной причиной создания учебно-тренировочного центра «Иктидор» является растущий спрос на ИТ-сферу в стране Узбекистан и нехватка специалистов в этой области.",
+      "second-cont": "Цель центра – подготовка профессионалов со зрелым и отличным опытом работы в каждом направлении ИТ-сферы. В нашем центре вам предложат не только академическое образование, но и практический опыт и программы мастер-классов от опытных специалистов своего дела. Кроме того, для вас открыт опенспейс, и вы можете сидеть в центре вне занятий и заниматься вместе с другими учениками группы, то есть не только обмениваться опытом, но и множеством друзей из представителей одной или другой области ИТ, вы можете увеличить."
+    },
+    "noData": {
+      "noData": "Вернитесь {noData-mainPage} или {connect}",
+      "noData-mainPage": "на главную",
+      "connect": "свяжитесь с нами"
+    },
+    "button": {
+      "apply": "Запись на курс",
+      "checking-again": "Проверить снова"
+    },
+    "sertificat": {
+      "checking-about": "Чтобы проверить действительность сертификата об окончании курса, введите соответствующий специальный код сертификата",
+      "certificat-code": "Код сертификата",
+      "correct-certificat": "Введенный вами {certificat-id}-значный сертификат действителен.",
+      "certificat-id": "",
+      "checked-name": "Ваш сертификат {name} подтвержден.",
+      "name": "",
+      "incorrect-sertificat": "{certificat-id} Введенный вами цифровой сертификат не найден в базе данных."
+    }
+  },
+  "en": {
+    "language": {
+      "lang": "English",
+      "shortLang": "Eng",
+      "flag": "/images/english.svg"
+    },
+    "navbar": {
+      "courses": "Our courses",
+      "about": "About Academy",
+      "apply": "Submit"
+    },
+    "mainCopmponent": {
+      "agree_with": "It's not a {agree_with_title}",
+      "agree_with_title": "miracle",
+      "this": "this",
+      "aboutYourself": "To enroll in our courses, fill out an application with information about yourself.",
+      "checking": "Check certificate status"
+    },
+    "goal": {
+      "today": "{today_title} kun o’rganuvchilari,",
+      "today_title": "Today's",
+      "tommorow": "{tommorow_title} of the future",
+      "tommorow_title": "Hopes",
+      "talent": "{talent_title} into the future with Iqtidor",
+      "talent_title": "Step",
+      "goal-about": "To be the owner of tomorrow, you need to learn from today! Learn future professions with us! The IT fields are very interconnected, and in the process of mastering one field, you are acquiring the necessary knowledge about several other fields at the same time."
+    },
+    "mentors": {
+      "title": "Our mentors"
+    },
+    "signUpCourse": {
+      "title": "Sign up for our courses!",
+      "fullName": "Your first and last name",
+      "phoneNumber": "Your phone number",
+      "placeholder": "Enter your first and last name",
+      "agreement": "When submitting an application, I agree to the terms of the offer",
+      "sending": "Send",
+      "complete": "Enter your information!"
+    },
+    "succes-modal": {
+      "title": "Your request has been accepted!",
+      "about": "Our staff will contact you within 3 days",
+      "go-back": "Come back"
+    },
+    "socialSection": {
+      "instagram": "Follow us on Instagram",
+      "telegram": "Follow us on Telegram"
+    },
+    "titles": {
+      "graduate": "Jobs of our graduates",
+      "partners": "Our partners",
+      "courses": "Our courses",
+      "whatAwaitsyou": "What awaits you?",
+      "coursePrograms": "Course program",
+      "teachers": "Our teachers",
+      "complete": "KWhat knowledge will you gain {complete-add}?",
+      "complete-add": "after completing the course",
+      "verification": "Certificate verification",
+      "certificat": "CERTIFICATE"
+    },
+    "footer": {
+      "aboutUs": "Iqtidor IT Academy — New Knowledge Center at the professional level. Come and build your future with us!",
+      "prevented": "All rights reserved",
+      "aboutAcademy": "About the Academy",
+      "courses": "Our courses",
+      "developedBy": "Developed by"
+    },
+    "mainAbout": {
+      "title": "{title-addition} the Academy ",
+      "title-addition": "About",
+      "first-cont": "The main reason for the establishment of the Iqtidor Academy is the growing demand for it in Uzbekistan and the shortage of professionals in this industry.",
+      "second-cont": "The aim of the center is to bring out the IT sector by bringing up professionals with a rich mature and perfect experience in each direction. In our center, you are being conducted not only by academic education, but also master class programs from practical experiences to mature professionals in their field. In addition to open-space yartlık for you, you can increase a lot of friends from representatives of this or that area of the IT direction, not being limited to sharing experiences, so that ou can sit at the center in addition to the lesson and work with other gurug students."
+    },
+    "button": {
+      "apply": "Enroll in the course",
+      "checking-again": "Check again"
+    },
+    "noData": {
+      "noData": "Return to the {noData-mainPage} или {connect}",
+      "noData-mainPage": "main page",
+      "connect": "contact us"
+    },
+    "sertificat": {
+      "checking-about": "To verify that the certificate of completion of the course is valid, enter the special code corresponding to the certificate.",
+      "certificat-code": "Certificate code",
+      "correct-certificat": "The {certificat-id} digit certificate you entered is valid",
+      "certificat-id": "",
+      "checked-name": "{name} your certificate has been verified",
+      "name": "",
+      "incorrect-sertificat": "{certificat-id} The digital certificate you entered was not found in the database"
+    }
+  }
+}
