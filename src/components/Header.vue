@@ -128,10 +128,14 @@
 import CButton from "./ui/Button.vue";
 import FlagDropDown from "./ui/FlagDropDown.vue";
 import MenuBarComponent from "./ui/MenuBarComponent.vue";
+
 import { useI18n } from "vue-i18n";
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
+function toggleSHowing() {
+  show.value = !show.value;
+}
 const route = useRoute();
 onMounted(() => {
   console.log(route.name);

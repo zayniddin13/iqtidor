@@ -22,6 +22,7 @@
     </div>
     <div
       v-if="open"
+      ref="target"
       class="absolute z-40 top-14 left-0 bg-white w-full rounded-lg border border-collapse border-main-grey"
     >
       <div
@@ -50,6 +51,10 @@
 </template>
 <script setup>
 import { defineProps, defineEmits, ref } from "vue";
+import { onClickOutside } from "@vueuse/core";
+let open = ref(false);
+const target = ref(null);
+onClickOutside(target, (event) => (open.value = false));
 let props = defineProps({
   placeholder: String,
   title: String | Number,
@@ -58,7 +63,7 @@ let props = defineProps({
   options: Array,
   styles: String,
 });
-let open = ref(false);
+
 function toggeOpen() {
   open.value = !open.value;
   console.log(open.value);
