@@ -7,19 +7,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
   background: linear-gradient(152deg, #fff 10.15%, #f6f6f6 82.7%);
   font-family: "SF UI Display";
 }
 .conteiner {
-  max-width: 1460px;
+  max-width: 1132px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 590px) {
   .container {

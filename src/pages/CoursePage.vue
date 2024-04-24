@@ -1,8 +1,8 @@
 <template>
   <div v-if="fetchDatas">
-    <Transition>
+    <Transition name="fade" mode="out-in" class="duration-700 transition-all">
       <div>
-        <CourseMainSection :slug="routes" />
+        <CourseMainSection id="main-about" :slug="routes" />
         <CoursesSection :id="fetchDatas.id" />
         <ProgramsOfCourse :id="fetchDatas.id" />
         <CompletedSection :id="fetchDatas.id" />
@@ -52,3 +52,14 @@ onMounted(() => {
   fetchDataFromApi();
 });
 </script>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

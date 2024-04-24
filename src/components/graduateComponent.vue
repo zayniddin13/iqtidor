@@ -1,11 +1,11 @@
 <template>
-  <div class="!px-16 conteiner mt-16 relative">
+  <div class="!px-16 mt-16 relative">
     <div class="title mb-11 font-bold leading-5 text-primaryBlue text-3xl">
       {{ $t("titles.partners") }}
     </div>
     <div class="overflow-hidden">
       <div class="swipers relative">
-        <div class="swiper-wrapper items-center gap-4 relative max-h-[100px]">
+        <div class="swiper-wrapper items-center gap-4 relative">
           <div
             class="swiper-slide group transition-all duration-300 hover:scale-105 cursor-pointer gap-3 rounded-2xl !bg-transparent !w-[250px] h-full"
             v-for="(item, index) in fetchDatas"
@@ -21,14 +21,14 @@
         </div>
       </div>
       <swiper-button-next
-        class="swiper-button-next-custom absolute rounded-full -rotate-180 !top-[70%] -translate-y-1/2 z-50 !right-2 max-[1100px]:!right-16 max-[800px]:!right-14 max-[650px]:hidden max-[1100px]:!translate-x-full border-2 border-primaryBlue py-4 px-3 flex items-center justify-center transition-all duration-300 hover:border-yellow-in-light hover:bg-yellow-in-light/20 cursor-pointer group"
+        class="swiper-button-next-custom absolute rounded-full -rotate-180 !top-[70%] -translate-y-1/2 z-50 !right-2 max-[1100px]:!right-16 max-[800px]:!right-14 max-[650px]:hidden max-[1100px]:!translate-x-full border-2 border-primaryBlue py-4 px-3 flex items-center justify-center transition-all duration-300 hover:border-yellow-in-light hover:bg-yellow-in-light/20 cursor-pointer group min-[970px]:hidden"
       >
         <span
           class="icon-left text-primaryBlue group-hover:text-yellow-in-light"
         ></span>
       </swiper-button-next>
       <swiper-button-prev
-        class="swiper-button-prev-custom absolute rounded-full top-[70%] -translate-y-1/2 z-50 !left-2 max-[1100px]:!left-16 max-[800px]:!left-14 max-[650px]:hidden max-[1100px]:!-translate-x-full border-2 border-primaryBlue hover:border-yellow-in-light py-4 px-3 flex items-center justify-center transition-all duration-300 hover:bg-yellow-in-light/20 cursor-pointer group"
+        class="swiper-button-prev-custom absolute rounded-full top-[70%] -translate-y-1/2 z-50 !left-2 max-[1100px]:!left-16 max-[800px]:!left-14 max-[650px]:hidden max-[1100px]:!-translate-x-full border-2 border-primaryBlue hover:border-yellow-in-light py-4 px-3 flex items-center justify-center transition-all duration-300 hover:bg-yellow-in-light/20 cursor-pointer group min-[970px]:hidden"
         ><span
           class="icon-left text-primaryBlue group-hover:text-yellow-in-light"
         ></span

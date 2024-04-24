@@ -20,9 +20,9 @@
           {{ $t("signUpCourse.title") }}
         </h2>
         <img
-          src="@/images/getEmail.png"
+          src="@/images/signup.svg"
           alt="fns"
-          class="max-[900px]:text-center mx-auto max-[900px]:mb-5"
+          class="max-[900px]:text-center mx-auto max-[900px]:mb-5 w-full"
         />
       </div>
       <div>
@@ -35,7 +35,7 @@
                 'bg-yellow-in-light/10 border-yellow-in-light':
                   activeIndex == item.id,
               }"
-              class="p-3 rounded-[5px] border border-main-grey border-solid h-[115px]"
+              class="p-3 rounded-[5px] border border-main-grey border-solid h-[115px] transition-all duration-300"
             >
               <div class="header flex justify-between">
                 <img :src="item.icon" alt="" class="w-9 h-9" />
@@ -44,7 +44,7 @@
                     ' bg-yellow-in-light border-yellow-in-light':
                       activeIndex == item.id,
                   }"
-                  class="border-main-grey bg-white border border-solid rounded-[2px] w-4 h-4 flex items-center justify-center"
+                  class="border-main-grey bg-white border border-solid rounded-[2px] w-4 h-4 flex items-center justify-center transition-all duration-300"
                 >
                   <span class="icon-checkmark text-xs text-white" />
                 </div>
@@ -61,7 +61,8 @@
               {{ $t("signUpCourse.fullName") }}
             </h2>
             <CInput
-              :style="{ 'border-red-600': nameError }"
+              :styles="{ 'border-red-600': nameError }"
+              @click="nameStart"
               v-model="fullName"
               :placeholder="$t('signUpCourse.placeholder')"
             />
@@ -70,17 +71,16 @@
             <h2 class="text-base font-semibold leading-5 text-black-1 mb-2">
               {{ $t("signUpCourse.phoneNumber") }}
             </h2>
-
             <div
               :class="{ 'border-red-600': numberError }"
               class="flex items-center bg-gray-50 border border-main-grey h-10 rounded-[5px] focus-within:border-yellow-in-light transition-all duration-300 ease-in-out pr-2 py-2 max-w-[450px] w-full"
             >
-              <InputMask
+              <MaskInput
                 class="px-4 py-3 outline-none focus:outline-none placeholder:text-gray-150 bg-transparent w-full ring-0 focus:ring-0 active:ring-0 focus:border-none border-none placeholder:text-grey-2 text-sm font-normal text-primaryBlue"
                 id="basic"
                 v-model="value"
                 variant="filled"
-                mask="+998 99 999 99 99"
+                mask="+998 ## ### ## ##"
                 placeholder="+998 99-999 99 99"
               />
             </div>
@@ -112,6 +112,7 @@
           </div>
 
           <CButton
+            :isDisabled="!agree"
             @click="postAplication"
             variant="secondary"
             :title="$t('signUpCourse.sending')"
@@ -134,7 +135,6 @@
 import { onMounted, ref } from "vue";
 import { storeInstance } from "../instance/index.js";
 import { useI18n } from "vue-i18n";
-import InputMask from "primevue/inputmask";
 import CInput from "../components/ui/Input.vue";
 import CButton from "../components/ui/Button.vue";
 import SuccessModal from "../components/modals/Success.vue";
@@ -154,8 +154,16 @@ const numberError = ref(false);
 function toggleAgree() {
   console.log("salom");
   agree.value = !agree.value;
+  agreement.value = true;
+}
+function nameStart(params) {
+  nameError.value = false;
+}
+function numberStart(params) {
+  numberError.value = false;
 }
 const setActive = (index) => {
+  courseError.value = false;
   if (activeIndex.value !== index) {
     activeIndex.value = index;
   } else {
@@ -186,45 +194,45 @@ const postAplication = async () => {
   } else {
     if (value.value) {
       let number = value.value.split(" ").join("");
-    }
-    try {
-      loading.value = true;
-      const response = await storeInstance.post(`/create/application/`, {
-        full_name: fullName.value,
-        phone_number: value.value,
-        course: activeIndex.value,
-      });
-      succesPost.value = true;
-      document.getElementById("body").style.overflowY = "hidden";
-      nameError.value = false;
-      numberError.value = false;
-      courseError.value = false;
-      agreement.value = true;
-    } catch (a) {
-      console.log(a.response.data);
-      errorName.value = t("signUpCourse.complete");
-      error.value = true;
-      setTimeout(() => {
-        error.value = false;
-      }, 3000);
-      let errorCont = ref(null);
-      for (const key in a.response.data) {
-        if (Object.hasOwnProperty.call(a.response.data, key)) {
-          errorCont.value = `${key}`;
-          if (errorCont.value == "full_name") {
-            nameError.value = true;
-          } else if (errorCont.value == "phone_number") {
-            numberError.value = true;
-          } else if (errorCont.value == "course") {
-            courseError.value = true;
+
+      try {
+        loading.value = true;
+        const response = await storeInstance.post(`/create/application/`, {
+          full_name: fullName.value,
+          phone_number: number,
+          course: activeIndex.value,
+        });
+        succesPost.value = true;
+        document.getElementById("body").style.overflowY = "hidden";
+        nameError.value = false;
+        numberError.value = false;
+        courseError.value = false;
+        agreement.value = true;
+      } catch (a) {
+        console.log(a.response.data);
+        errorName.value = t("signUpCourse.complete");
+        error.value = true;
+        setTimeout(() => {
+          error.value = false;
+        }, 3000);
+        let errorCont = ref(null);
+        for (const key in a.response.data) {
+          if (Object.hasOwnProperty.call(a.response.data, key)) {
+            errorCont.value = `${key}`;
+            if (errorCont.value == "full_name") {
+              nameError.value = true;
+            } else if (errorCont.value == "phone_number") {
+              numberError.value = true;
+            } else if (errorCont.value == "course") {
+              courseError.value = true;
+            }
           }
         }
+      } finally {
       }
-    } finally {
     }
   }
 };
-
 const fetchDataFromApi = async () => {
   try {
     loading.value = true;

@@ -8,7 +8,7 @@
         <p class="text-base font-normal leading-6 text-white mb-9">
           Iqtidor IT Academy © “IQ NTM” 2023 | {{ $t("footer.prevented") }}
         </p>
-        <div class="flex gap-4 items-center">
+        <div class="flex gap-4 items-base">
           <a
             v-for="(item, index) in fetchDatas"
             :key="index"

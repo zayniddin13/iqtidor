@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="conteiner">
-      <div class="pl-24 max-[1023px]:pl-0 relative max-[1080px]:pl-0 pb-5">
+      <div class="px-24 max-[1023px]:pl-0 relative max-[1080px]:pl-0 pb-5">
         <div class="relative mb-12">
           <i18n-t
             keypath="mainCopmponent.agree_with"
@@ -28,7 +28,7 @@
               alt=""
             />
             <h1
-              class="text-7xl max-[990px]:text-5xl max-[490px]:text-4xl font-bold leading-tight text-primaryBlue mt-8 -ml-14 max-[1023px]:-ml-24 max-[990px]:-ml-16 max-[990px]:mt-14 max-[590px]:-ml-8 max-[490px]:mt-8 max-[390px]:ml-0"
+              class="text-7xl max-[990px]:text-5xl max-[490px]:text-4xl font-bold leading-tight text-primaryBlue mt-8 max-[990px]:mt-14 flex gap-2 -ml-16"
             >
               {{ $t("mainCopmponent.this") }}
               <span
@@ -89,7 +89,8 @@ import { useI18n } from "vue-i18n";
 import VueScrollTo from "vue-scrollto";
 const scrollToApplyComponent = () => {
   VueScrollTo.scrollTo("#apply", {
-    easing: "ease-in-out",
+    duration: 400,
+    updateHistory: false,
   });
 };
 </script>

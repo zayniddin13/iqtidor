@@ -9,6 +9,7 @@
       <div v-for="(item, index) in fetchDatas" :key="index">
         <router-link
           :to="`/detail/${item.slug}`"
+          @click="scrollToMainComponent"
           class="relative group transition-all duration-300 rounded-xl border border-solid border-main-grey p-5 max-[580px]:p-2 bg-white flex flex-col justify-center text-center items-center h-[230px] hover:shadow-lg cursor-pointer"
         >
           <div
@@ -31,6 +32,8 @@
 import { onMounted, ref } from "vue";
 import { storeInstance } from "../instance/index.js";
 import { useI18n } from "vue-i18n";
+import { useRoute, useRouter } from "vue-router";
+const route = useRoute();
 const { t, locale } = useI18n();
 const loading = ref(false);
 const fetchDatas = ref(null);
@@ -51,4 +54,12 @@ const fetchDataFromApi = async () => {
 onMounted(() => {
   fetchDataFromApi();
 });
+import VueScrollTo from "vue-scrollto";
+
+const router = useRouter();
+const scrollToMainComponent = () => {
+  VueScrollTo.scrollTo("#main-about", {
+    easing: "ease-in-out",
+  });
+};
 </script>

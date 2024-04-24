@@ -2,6 +2,7 @@
   <div class="relative">
     <div
       @click="toggeOpen"
+      ref="target"
       :class="styles"
       class="flex items-center bg-white border border-secandryGrey rounded-xl focus-within:border-yellow-in-light transition-all duration-300 ease-in-out py-0 px-2 max-w-[180px] border-bottom cursor-pointer hover:border-yellow-in-light"
     >
@@ -15,14 +16,13 @@
       />
       <div
         class="transition-all duration-300"
-        :class="open ? 'rotate-180' : ''"
+        :class="openValue ? 'rotate-180' : ''"
       >
         <slot name="suffix"></slot>
       </div>
     </div>
     <div
-      v-if="open"
-      ref="target"
+      v-if="openValue"
       class="absolute z-40 top-14 left-0 bg-white w-full rounded-lg border border-collapse border-main-grey"
     >
       <div
@@ -34,8 +34,16 @@
         <div class="flex justify-between">
           <div class="flex items-center gap-2">
             <img :src="item.flag" alt="" />
-            <div class="max-[1100px]:hidden block">{{ item.lang }}</div>
-            <div class="max-[1100px]:block hidden">{{ item.shortLang }}</div>
+            <div
+              class="max-[1100px]:hidden block font-poppins font-normal test-base leading-6 text-secondaryBlue"
+            >
+              {{ item.lang }}
+            </div>
+            <div
+              class="max-[1100px]:block hidden font-poppins font-normal test-base leading-6 text-secondaryBlue"
+            >
+              {{ item.shortLang }}
+            </div>
           </div>
           <span
             :class="
@@ -52,9 +60,9 @@
 <script setup>
 import { defineProps, defineEmits, ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
-let open = ref(false);
+const openValue = ref(false);
 const target = ref(null);
-onClickOutside(target, (event) => (open.value = false));
+onClickOutside(target, (event) => (openValue.value = false));
 let props = defineProps({
   placeholder: String,
   title: String | Number,
@@ -63,10 +71,8 @@ let props = defineProps({
   options: Array,
   styles: String,
 });
-
 function toggeOpen() {
-  open.value = !open.value;
-  console.log(open.value);
+  openValue.value = !openValue.value;
 }
 const emit = defineEmits(["value"]);
 function selectFunc(value) {

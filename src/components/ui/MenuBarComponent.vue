@@ -12,9 +12,11 @@
         </h2>
         <div
           @click="closeModal"
-          class="py-2 px-2 flex items-center justify-center rounded-lg bg-main-grey transition-all duration-300 cursor-pointer"
+          class="py-2 px-2 flex items-center justify-center rounded-lg bg-main-grey transition-all duration-300 cursor-pointer group"
         >
-          <span class="icon-close text-2xl"></span>
+          <span
+            class="icon-close text-2xl text-primaryBlue group-active:text-yellow-in-light"
+          ></span>
         </div>
       </div>
       <div class="manuBody">
@@ -39,14 +41,18 @@
           >
         </ul>
       </div>
-      <div class="footer flex gap-4 absolute bottom-0">
+      <div
+        class="footer flex items-center justify-between gap-10 absolute bottom-0"
+      >
         <div v-for="(item, index) in langs" :key="index">
           <div
             @click="changeLang(item.id)"
             :class="props.active == item.id ? 'bg-main-grey' : ''"
             class="py-2 px-2 flex items-center justify-center rounded-lg transition-all duration-300 cursor-pointer"
           >
-            <span class="text-xl font-thin">{{ item.lang }}</span>
+            <span class="text-xl font-light text-primaryBlue">{{
+              item.lang
+            }}</span>
           </div>
         </div>
       </div>
