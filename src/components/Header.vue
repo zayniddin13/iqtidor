@@ -164,17 +164,17 @@ const openLoginModal = () => {
 };
 const languages = [
   {
-    flag: "../../public/images/uzbek.svg ",
+    flag: "/images/uzbek.svg ",
     lang: "O'zbekcha",
     shortLang: "uz",
   },
   {
-    flag: "../../public/images/rus.svg ",
+    flag: "/images/rus.svg ",
     lang: "Русский",
     shortLang: "ru",
   },
   {
-    flag: "../../public/images/english.svg ",
+    flag: "/images/english.svg ",
     lang: "English",
     shortLang: "en",
   },

@@ -33,7 +33,7 @@
       >
         <div class="flex justify-between">
           <div class="flex items-center gap-2">
-            <img :src="item.flag" alt="" />
+            <img :src="item.flag" alt="flag" />
             <div
               class="max-[1100px]:hidden block font-poppins font-normal test-base leading-6 text-secondaryBlue"
             >
