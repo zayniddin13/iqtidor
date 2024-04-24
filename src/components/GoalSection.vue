@@ -43,7 +43,7 @@
         </li>
       </ul>
     </div>
-    <div class="text-grey-3 font-normal text-lg leading-5">
+    <div class="text-grey-3 font-normal text-lg leading-5 tracking-[0.38px]">
       {{ $t("goal.goal-about") }}
     </div>
   </div>

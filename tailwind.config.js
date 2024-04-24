@@ -29,6 +29,8 @@ export default {
       },
       backgroundImage: {
         notFoundBg: "url('@/images/NotFoundImg.svg')",
+        linearGradient:
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.60) 85.16%)",
       },
     },
     accentColor: ({ theme }) => ({
@@ -70,7 +72,8 @@ export default {
     backgroundColor: ({ theme }) => theme("colors"),
     backgroundImage: {
       none: "none",
-      "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
+      "gradient-to-t":
+        "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.60) 85.16%),  lightgray 50% / cover no-repeat, #DEDEDE;",
       "gradient-to-tr":
         "linear-gradient(to top right, var(--tw-gradient-stops))",
       "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="mainDisplay" class="conteiner mt-16">
+    <div v-if="mainDisplay" class="conteiner mt-16 min-h-screen">
       <div class="title font-bold leading-7 text-3xl text-primaryBlue mb-3">
         {{ $t("titles.verification") }}
       </div>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <validSertificat
-      v-if="correctDisplay"
+      v-if="correctDisplay && value"
       :value="value"
       :fullName="fetchDatas.full_name"
       @mainDisplay="checkAgain"
@@ -88,7 +88,7 @@ const value = ref("");
 const fetchDatas = ref(null);
 const loading = ref(false);
 const fetchDataFromApi = async () => {
-  if (captchaToken.value) {
+  if (captchaToken.value && value.value) {
     try {
       loading.value = true;
       const response = await certificateInstance.get(`/${value.value}`);

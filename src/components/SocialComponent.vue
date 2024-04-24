@@ -1,6 +1,8 @@
 <template>
   <div class="overflow-hidden">
-    <div class="conteiner flex items-center gap-16 py-8 max-[780px]:block">
+    <div
+      class="conteiner flex items-center justify-between gap-4 py-8 max-[780px]:block"
+    >
       <div class="flex gap-3 items-center max-[780px]:mb-5">
         <img
           src="@/images/Instagram.png"
@@ -14,8 +16,8 @@
             {{ $t("socialSection.instagram") }}
           </p>
           <a
-            class="text-3xl max-[400px]:text-2xl font-bold leading-7"
-            href="https://web.telegram.org/k/"
+            class="text-3xl max-[400px]:text-2xl font-bold leading-7 text-primaryBlue"
+            href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
             >@iqtidor_maktabi</a
@@ -35,8 +37,8 @@
             {{ $t("socialSection.telegram") }}
           </p>
           <a
-            class="text-3xl max-[400px]:text-2xl font-bold leading-7"
-            href="https://www.instagram.com/"
+            class="text-3xl max-[400px]:text-2xl font-bold leading-7 text-primaryBlue"
+            href="https://web.telegram.org/k/"
             target="_blank"
             rel="noopener noreferrer"
             >@Iqtidor_academy</a
@@ -55,12 +57,12 @@
         class="mySwiper"
       >
         <swiper-slide
-          class="rounded-lg relative group hover:cursor-pointer transition-all duration-300 max-w-[200px] max-h-[300px]"
+          class="rounded-lg relative group hover:cursor-pointer transition-all duration-500 max-w-[200px] max-h-[300px]"
           v-for="(item, index) in fetchDatas"
           :key="index"
           ><a :href="item.url" target="_blank" rel="noopener noreferrer">
             <div
-              class="w-full h-full absolute hidden group-hover:flex items-center justify-center bg-black-2/70 rounded-lg transition-all duration-300"
+              class="w-full h-full absolute hidden group-hover:flex items-center justify-center bg-black-2/70 rounded-lg transition-all duration-500"
             >
               <img src="@/images/enter.svg" alt="" class="!w-8 !h-8" />
             </div>

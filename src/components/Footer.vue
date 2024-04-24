@@ -167,7 +167,7 @@ const navigateToPageTwo = async () => {
   z-index: 1;
   bottom: 120%;
   left: 50%;
-  margin-left: -60px;
+  transform: translateX(-50%);
 }
 
 .tooltip:hover .tooltiptext {

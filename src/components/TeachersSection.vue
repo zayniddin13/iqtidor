@@ -18,7 +18,7 @@
             <img
               :src="item.image"
               alt="teacher"
-              class="w-16 h-16 rounded-lg max-[500px]:w-10 max-[500px]:h-10"
+              class="w-16 h-16 rounded-lg max-[500px]:w-10 max-[500px]:h-10 object-cover"
             />
           </div>
           <div>

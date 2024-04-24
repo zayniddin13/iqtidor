@@ -25,14 +25,7 @@ const router = createRouter({
       },
       component: AboutPage,
     },
-    {
-      path: "/:courses",
-      name: "courses",
-      meta: {
-        layout: "default",
-      },
-      component: CoursesSection,
-    },
+
     {
       path: "/detail/:slug",
       name: "CoursePage",

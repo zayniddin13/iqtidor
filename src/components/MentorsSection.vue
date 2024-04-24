@@ -12,75 +12,85 @@
         class="absolute bottom-10 right-0"
       />
       <div>
-        <div class="title font-bold leading-7 text-3xl text-white mb-8">
+        <div
+          class="title font-bold leading-7 text-3xl text-white mb-8 conteiner"
+        >
           {{ $t("mentors.title") }}
         </div>
-        <Vue3Marquee :width="100" :pause-on-hover="true" duration="60">
-          <div
-            v-for="(item, index) in fetchDatas"
-            :key="index"
-            class="h-[246px] w-[195px] rounded-xl relative group transition-all duration-300 marquee-item ml-7"
+        <div class="max-w-[1360px] w-full mx-auto">
+          <Vue3Marquee :width="100" :pause-on-hover="true" duration="60">
+            <div
+              v-for="(item, index) in fetchDatas"
+              :key="index"
+              class="h-[246px] w-[195px] rounded-xl relative group transition-all duration-300 marquee-item ml-7"
+            >
+              <div
+                class="h-full w-full absolute top-0 left-0 bg-grey-4/50 rounded-xl transition-all duration-300 group-hover:opacity-0"
+              ></div>
+              <div
+                class="h-full w-full absolute top-0 left-0 bg-linearGradient rounded-xl transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+              <img
+                :src="item.image"
+                alt="imgesd"
+                class="w-[300px] h-full object-cover rounded-xl"
+              />
+              <div
+                class="transition-all duration-300 absolute bottom-0 z-10 left-5 opacity-0 group-hover:opacity-100 group-hover:bottom-5"
+              >
+                <p
+                  class="text-yellow-in-light text-sm max-[450px]:text-xs font-normal"
+                >
+                  {{ item.position.title }}
+                </p>
+                <h2
+                  class="text-lg max-[450px]:text-base font-bold text-white max-[450px]:leading-4 leading-5"
+                >
+                  {{ item.full_name }}
+                </h2>
+              </div>
+            </div>
+          </Vue3Marquee>
+          <Vue3Marquee
+            :width="100"
+            :pause-on-hover="true"
+            duration="60"
+            direction="reverse"
+            class="mt-8"
           >
             <div
-              class="h-full w-full absolute top-0 left-0 bg-grey-4/50 rounded-xl transition-all duration-300 group-hover:opacity-0"
-            ></div>
-            <img
-              :src="item.image"
-              alt="imgesd"
-              class="w-[300px] h-full object-cover rounded-xl"
-            />
-            <div
-              class="transition-all duration-300 absolute bottom-0 z-10 left-5 opacity-0 group-hover:opacity-100 group-hover:bottom-5"
+              v-for="(item, index) in fetchDatas"
+              :key="index"
+              class="h-[246px] w-[195px] rounded-xl relative group transition-all duration-300 marquee-item ml-7"
             >
-              <p
-                class="text-yellow-in-light text-sm max-[450px]:text-xs font-normal"
+              <div
+                class="h-full w-full absolute top-0 left-0 bg-grey-4/50 rounded-xl transition-all duration-300 group-hover:opacity-0"
+              ></div>
+              <div
+                class="h-full w-full absolute top-0 left-0 bg-linearGradient rounded-xl transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+              <img
+                :src="item.image"
+                alt="imgesd"
+                class="w-[300px] h-full object-cover rounded-xl"
+              />
+              <div
+                class="transition-all duration-300 absolute bottom-0 z-10 left-5 opacity-0 group-hover:opacity-100 group-hover:bottom-5"
               >
-                {{ item.position.title }}
-              </p>
-              <h2
-                class="text-lg max-[450px]:text-base font-bold text-white max-[450px]:leading-4 leading-5"
-              >
-                {{ item.full_name }}
-              </h2>
+                <p
+                  class="text-yellow-in-light text-sm max-[450px]:text-xs font-normal"
+                >
+                  {{ item.position.title }}
+                </p>
+                <h2
+                  class="text-lg max-[450px]:text-base font-bold text-white max-[450px]:leading-4 leading-5"
+                >
+                  {{ item.full_name }}
+                </h2>
+              </div>
             </div>
-          </div>
-        </Vue3Marquee>
-        <Vue3Marquee
-          :width="100"
-          :pause-on-hover="true"
-          duration="60"
-          direction="reverse"
-          class="mt-8"
-        >
-          <div
-            v-for="(item, index) in fetchDatas"
-            :key="index"
-            class="h-[246px] w-[195px] rounded-xl relative group transition-all duration-300 marquee-item ml-7"
-          >
-            <div
-              class="h-full w-full absolute top-0 left-0 bg-grey-4/50 rounded-xl transition-all duration-300 group-hover:opacity-0"
-            ></div>
-            <img
-              :src="item.image"
-              alt="imgesd"
-              class="w-[300px] h-full object-cover rounded-xl"
-            />
-            <div
-              class="transition-all duration-300 absolute bottom-0 z-10 left-5 opacity-0 group-hover:opacity-100 group-hover:bottom-5"
-            >
-              <p
-                class="text-yellow-in-light text-sm max-[450px]:text-xs font-normal"
-              >
-                {{ item.position.title }}
-              </p>
-              <h2
-                class="text-lg max-[450px]:text-base font-bold text-white max-[450px]:leading-4 leading-5"
-              >
-                {{ item.full_name }}
-              </h2>
-            </div>
-          </div>
-        </Vue3Marquee>
+          </Vue3Marquee>
+        </div>
       </div>
     </div>
   </div>

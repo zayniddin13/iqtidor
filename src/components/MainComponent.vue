@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="flex items-center justify-between">
-          <div class="w-full">
+          <div>
             <p class="text-lg font-medium leading-snug text-primaryBlue">
               {{ $t("mainCopmponent.aboutYourself") }}
             </p>
@@ -61,7 +61,7 @@
           </div>
           <div>
             <img
-              class="w-full animation max-[710px]:hidden"
+              class="animation max-[710px]:hidden"
               src="../../public/images/raketaImg.png"
               alt="raketa"
             />
@@ -94,10 +94,10 @@ const scrollToApplyComponent = () => {
   });
 };
 </script>
-<style scoped>
+<style>
 .animation {
   animation-name: scale;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -106,7 +106,7 @@ const scrollToApplyComponent = () => {
     scale: 100%;
   }
   to {
-    scale: 90%;
+    scale: 95%;
   }
 }
 </style>

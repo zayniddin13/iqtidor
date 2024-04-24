@@ -1,5 +1,5 @@
 <template>
-  <div class="!px-16 mt-16 relative">
+  <div class="!px-16 mt-16 relative max-w-[1360px] w-full mx-auto">
     <div class="title mb-11 font-bold leading-5 text-primaryBlue text-3xl">
       {{ $t("titles.partners") }}
     </div>

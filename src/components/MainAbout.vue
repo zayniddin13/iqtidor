@@ -1,6 +1,6 @@
 <template>
   <div class="relative z-5 overflow-x-hidden mb-16">
-    <div id="main-about" class="conteiner">
+    <div id="main-about" class="conteiner relative">
       <div
         class="flex justify-between items-center gap-20 mt-14 max-[880px]:block relative"
       >
@@ -20,7 +20,7 @@
             {{ $t("mainAbout.first-cont") }}
           </p>
         </div>
-        <div class="w-full"><img src="@/images/Iqtidor.png" alt="" /></div>
+        <div class="w-full"><img src="@/images/Iqtidor.svg" alt="" /></div>
       </div>
       <div
         class="flex justify-between items-center gap-20 max-[1100px]:mt-6 max-[880px]:block relative"
@@ -40,20 +40,48 @@
         <img
           src="@/images/circle-inAbout.png"
           alt=""
-          class="absolute bottom-0 right-0 -z-10 max-[880px]:left-8 max-[880px]:top-0 max-[600px]:hidden"
+          class="absolute bottom-0 rotation right-0 -z-10 max-[880px]:left-8 max-[880px]:top-0 max-[600px]:hidden"
         />
       </div>
       <img
         src="@/images/about-img.svg"
         alt=""
-        class="absolute top-10 left-8 -z-10 max-[600px]:hidden"
+        class="absolute aboutImg top-10 left-8 -z-10 max-[600px]:hidden"
       />
     </div>
     <img
       src="@/images/aboutRaketa.png"
       alt=""
-      class="absolute right-0 top-60 max-[670px]:hidden w-[250px] h-[309px]"
+      class="absolute animation right-0 top-60 max-[670px]:hidden w-[250px] h-[309px]"
     />
   </div>
 </template>
-<script setup></script>
+<style>
+.aboutImg {
+  animation-name: toBottom;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+.rotation {
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes toBottom {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 40px;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>

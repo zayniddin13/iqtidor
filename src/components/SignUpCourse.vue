@@ -35,7 +35,7 @@
                 'bg-yellow-in-light/10 border-yellow-in-light':
                   activeIndex == item.id,
               }"
-              class="p-3 rounded-[5px] border border-main-grey border-solid h-[115px] transition-all duration-300"
+              class="p-3 rounded-[5px] border border-main-grey border-solid h-[115px] transition-all duration-300 hover:cursor-pointer group hover:border-yellow-in-light hover:bg-yellow-in-light/10"
             >
               <div class="header flex justify-between">
                 <img :src="item.icon" alt="" class="w-9 h-9" />
@@ -44,7 +44,7 @@
                     ' bg-yellow-in-light border-yellow-in-light':
                       activeIndex == item.id,
                   }"
-                  class="border-main-grey bg-white border border-solid rounded-[2px] w-4 h-4 flex items-center justify-center transition-all duration-300"
+                  class="border-main-grey bg-white border border-solid rounded-[2px] w-4 h-4 flex items-center justify-center transition-all duration-300 group-hover:border-yellow-in-light"
                 >
                   <span class="icon-checkmark text-xs text-white" />
                 </div>
@@ -65,6 +65,7 @@
               @click="nameStart"
               v-model="fullName"
               :placeholder="$t('signUpCourse.placeholder')"
+              maxLength="40"
             />
           </div>
           <div class="w-full max-[670px]:mb-4">
@@ -105,7 +106,7 @@
             </div>
             <p
               :class="{ 'text-red-600': !agreement }"
-              class="text-xs font-medium leading-5 text-primaryBlue tracking-[.5px] max-[670px]:font-thin"
+              class="text-sm font-medium leading-4 text-primaryBlue tracking-[.5px] max-[670px]:font-thin"
             >
               {{ $t("signUpCourse.agreement") }}
             </p>
