@@ -1,5 +1,5 @@
 <template>
-  <div class="conteiner mt-16">
+  <div class="conteiner mt-16 toLeft">
     <div class="title mb-8 font-bold leading-5 text-primaryBlue text-2xl">
       {{ $t("titles.coursePrograms") }}
     </div>

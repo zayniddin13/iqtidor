@@ -5,11 +5,11 @@
       class="mainSection conteiner flex gap-20 max-[1060px]:gap-10 justify-between my-16"
     >
       <img
-        class="w-[500px] h-[420px] max-[950px]:w-[400px] max-[950px]:h-[320px] max-[850px]:hidden block"
+        class="w-[500px] h-[420px] max-[950px]:w-[400px] max-[950px]:h-[320px] max-[850px]:hidden block toRight"
         :src="fetchDatas.image"
         alt=""
       />
-      <div>
+      <div class="toLeft max-w-[600px]">
         <div
           class="title text-yellow-in-light text-7xl max-[1000px]:text-6xl max-[700px]:text-4xl max-[430px]:text-3xl font-bold leading-tight mb-6"
         >

@@ -4,7 +4,7 @@
       <div
         class="flex justify-between items-center gap-20 mt-14 max-[880px]:block relative"
       >
-        <div class="max-[880px]:mb-5">
+        <div class="max-[880px]:mb-5 toRight max-w-[670px]">
           <i18n-t
             keypath="mainAbout.title"
             tag="p"
@@ -20,7 +20,9 @@
             {{ $t("mainAbout.first-cont") }}
           </p>
         </div>
-        <div class="w-full"><img src="@/images/Iqtidor.svg" alt="" /></div>
+        <div class="w-full toLeft">
+          <img src="@/images/Iqtidor.svg" alt="" />
+        </div>
       </div>
       <div
         class="flex justify-between items-center gap-20 max-[1100px]:mt-6 max-[880px]:block relative"
@@ -28,9 +30,9 @@
         <img
           src="@/images/mainAboutLeft.png"
           alt=""
-          class="w-[590px] h-[520px] max-[1100px]:w-[490px] max-[1100px]:h-[470px] max-[980px]:w-[390px] max-[980px]:h-[370px] max-[880px]:w-full max-[880px]:max-w-[590px] max-[880px]:h-[520px]"
+          class="w-[590px] h-[520px] max-[1100px]:w-[490px] max-[1100px]:h-[470px] max-[980px]:w-[390px] max-[980px]:h-[370px] max-[880px]:w-full max-[880px]:max-w-[590px] max-[880px]:h-[520px] toRight"
         />
-        <div>
+        <div class="toLeft max-w-[600px]">
           <p
             class="text-grey-3 text-xl max-[720px]:text-base max-[720px]:font-thin font-normal leading-7"
           >
@@ -59,6 +61,7 @@
 <style>
 .aboutImg {
   animation-name: toBottom;
+  animation-delay: 2;
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-direction: alternate;
@@ -82,6 +85,34 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.toRight {
+  animation-name: toRight;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+@keyframes toRight {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+.toLeft {
+  animation-name: toLeft;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+@keyframes toLeft {
+  from {
+    margin-right: -100%;
+  }
+  to {
+    margin-right: 20px;
   }
 }
 </style>

@@ -57,12 +57,12 @@
         class="mySwiper"
       >
         <swiper-slide
-          class="rounded-lg relative group hover:cursor-pointer transition-all duration-500 max-w-[200px] max-h-[300px]"
+          class="rounded-lg relative group hover:cursor-pointer transition-all duration-300 max-w-[200px] max-h-[300px]"
           v-for="(item, index) in fetchDatas"
           :key="index"
           ><a :href="item.url" target="_blank" rel="noopener noreferrer">
             <div
-              class="w-full h-full absolute hidden group-hover:flex items-center justify-center bg-black-2/70 rounded-lg transition-all duration-500"
+              class="w-full h-full absolute opacity-0 flex group-hover:opacity-100 items-center justify-center bg-black-2/70 rounded-lg transition-all duration-300"
             >
               <img src="@/images/enter.svg" alt="" class="!w-8 !h-8" />
             </div>

@@ -9,7 +9,7 @@
             class="text-3xl max-[990px]:text-2xl font-bold leading-tight text-primaryBlue/70 min-[450px]:whitespace-nowrap mt-2"
           >
             <template #today_title>
-              <a href="#" class="text-primaryBlue">{{
+              <a href="#" class="text-primaryBlue font-bold">{{
                 $t("goal.today_title")
               }}</a>
             </template>
@@ -22,7 +22,7 @@
             class="text-3xl max-[990px]:text-2xl font-bold leading-tight text-primaryBlue/70 min-[450px]:whitespace-nowrap mt-2"
           >
             <template #tommorow_title>
-              <a href="#" class="text-primaryBlue">{{
+              <a href="#" class="text-primaryBlue font-bold">{{
                 $t("goal.tommorow_title")
               }}</a>
             </template>
@@ -35,7 +35,7 @@
             class="text-3xl max-[990px]:text-2xl font-bold leading-tight text-primaryBlue/70 min-[450px]:whitespace-nowrap mt-2"
           >
             <template #talent_title>
-              <span href="#" class="text-primaryBlue">{{
+              <span href="#" class="text-primaryBlue font-bold">{{
                 $t("goal.talent_title")
               }}</span>
             </template>

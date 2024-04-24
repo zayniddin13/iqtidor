@@ -17,8 +17,8 @@
         >
           {{ $t("mentors.title") }}
         </div>
-        <div class="max-w-[1360px] w-full mx-auto">
-          <Vue3Marquee :width="100" :pause-on-hover="true" duration="60">
+        <div class="w-full mx-auto">
+          <Vue3Marquee :pause-on-hover="true" :clone="true" duration="60">
             <div
               v-for="(item, index) in fetchDatas"
               :key="index"
@@ -54,6 +54,7 @@
           <Vue3Marquee
             :width="100"
             :pause-on-hover="true"
+            :clone="true"
             duration="60"
             direction="reverse"
             class="mt-8"

@@ -1,5 +1,8 @@
 <template>
-  <div v-if="fetchDatas" class="conteiner max-[510px]:mt-40 max-[400px]:mt-60">
+  <div
+    v-if="fetchDatas"
+    class="conteiner max-[510px]:mt-40 max-[400px]:mt-60 toRight"
+  >
     <div class="title font-bold leading-7 text-2xl text-primaryBlue mb-8">
       {{ $t("titles.whatAwaitsyou") }}
     </div>

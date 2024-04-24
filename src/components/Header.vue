@@ -201,8 +201,22 @@ function changeLang(value) {
   document.getElementById("body").style.overflowY = "scroll";
 }
 import VueScrollTo from "vue-scrollto";
-
 const router = useRouter();
+
+const scrollToApplyComponent = () => {
+  VueScrollTo.scrollTo("#apply", {
+    easing: "ease-in-out",
+  });
+};
+
+const navigateToAplly = async () => {
+  if (route.path !== "/") {
+    await router.push({ path: "/" });
+    scrollToApplyComponent();
+  } else {
+    scrollToApplyComponent();
+  }
+};
 const scrollToInnerComponent = () => {
   VueScrollTo.scrollTo("#courses");
 };
@@ -215,21 +229,6 @@ const navigateToPageTwo = async () => {
   } else {
     await router.push({ path: "/" });
     scrollToInnerComponent();
-  }
-};
-const scrollToApplyComponent = () => {
-  VueScrollTo.scrollTo("#apply", {
-    easing: "ease-in-out",
-  });
-};
-
-const navigateToAplly = async () => {
-  if (route.path == "/about-page") {
-    console.log(route.path);
-    await router.push({ path: "/" });
-    scrollToApplyComponent();
-  } else {
-    scrollToApplyComponent();
   }
 };
 </script>
