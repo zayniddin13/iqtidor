@@ -3,7 +3,7 @@
     :disabled="isDisabled ? true : false"
     :class="[
       {
-        '!cursor-not-allowed opacity-50 hover:!bg-primaryBlue active:scale-100 hover:text-white':
+        '!cursor-not-allowed opacity-50 hover:!bg-primaryBlue active:!scale-100 hover:text-white':
           isDisabled,
       },
       styles,

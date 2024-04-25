@@ -23,6 +23,7 @@
 <script setup>
 import { defineProps, ref, onMounted } from "vue";
 import { storeInstance } from "../instance/index.js";
+import Skeleton from "./ui/Skeleton.vue";
 import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n();
 const props = defineProps({
@@ -30,12 +31,11 @@ const props = defineProps({
 });
 const fetchDatas = ref(null);
 const ID = ref(null);
-const loading = ref(false);
+const loading = ref(true);
 const fetchDataFromApi = async () => {
   if (props.id) {
     console.log(props.id);
     try {
-      loading.value = true;
       const response = await storeInstance.get(`/${props.id}/list/section/`, {
         headers: {
           "Accept-Language": locale._value,
@@ -46,6 +46,9 @@ const fetchDataFromApi = async () => {
     } catch (error) {
       console.log(error);
     } finally {
+      setTimeout(() => {
+        loading.value = false;
+      }, 500);
     }
   }
 };

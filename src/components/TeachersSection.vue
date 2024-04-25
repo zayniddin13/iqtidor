@@ -1,5 +1,5 @@
 <template>
-  <div class="conteiner mt-16">
+  <div v-if="fetchDatas" class="conteiner mt-16">
     <div class="title mb-8 text-3xl font-bold leading-7 text-primaryBlue">
       {{ $t("titles.teachers") }}
     </div>
@@ -54,12 +54,11 @@ const props = defineProps({
   slug: String || Number,
 });
 const fetchDatas = ref(null);
-const loading = ref(false);
+const loading = ref(true);
 const fetchDataFromApi = async () => {
   console.log(props.slug);
   if (props.slug) {
     try {
-      loading.value = true;
       const response = await storeInstance.get(`/detail/${props.slug}`, {
         headers: {
           "Accept-Language": locale._value,
@@ -70,6 +69,9 @@ const fetchDataFromApi = async () => {
     } catch (error) {
       console.log(error);
     } finally {
+      setTimeout(() => {
+        loading.value = false;
+      }, 500);
     }
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <Transition mode="out-in" name="fade">
+  <div>
     <div
       v-if="fetchDatas"
       class="mainSection conteiner flex gap-20 max-[1060px]:gap-10 justify-between my-16"
@@ -29,7 +29,7 @@
         <CButton variant="secondary" :title="$t('button.apply')" />
       </div>
     </div>
-  </Transition>
+  </div>
 </template>
 <script setup>
 import { ref, onMounted, defineProps } from "vue";
@@ -38,7 +38,7 @@ const props = defineProps({
   slug: String,
 });
 const fetchDatas = ref(null);
-const loading = ref(false);
+const loading = ref(true);
 const courseName = ref("");
 const firstWord = ref("");
 const secondWord = ref("");
@@ -48,7 +48,6 @@ const fetchDataFromApi = async () => {
   console.log(props.slug);
   if (props.slug) {
     try {
-      loading.value = true;
       const response = await storeInstance.get(`/detail/${props.slug}`, {
         headers: {
           "Accept-Language": locale._value,
@@ -58,10 +57,12 @@ const fetchDataFromApi = async () => {
       courseName.value = fetchDatas.value.title.split(" ");
       firstWord.value = courseName.value[0];
       secondWord.value = courseName.value.slice(1).join(" ");
-      console.log(fetchDatas.value);
     } catch (error) {
       console.log(error);
     } finally {
+      setTimeout(() => {
+        loading.value = false;
+      }, 500);
     }
   }
 };
