@@ -95,10 +95,10 @@
 }
 @keyframes toRight {
   from {
-    margin-left: -100%;
+    opacity: 0;
   }
   to {
-    margin-left: 20px;
+    opacity: 100;
   }
 }
 .toLeft {
@@ -109,10 +109,10 @@
 }
 @keyframes toLeft {
   from {
-    margin-right: -100%;
+    opacity: 0;
   }
   to {
-    margin-right: 20px;
+    opacity: 100;
   }
 }
 </style>
