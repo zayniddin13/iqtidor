@@ -1,6 +1,6 @@
 <template>
   <Transition name="fade" mode="out-in">
-    <div>
+    <div class="content">
       <MainComponent />
       <GoalSection />
       <CoursesSection id="courses" />

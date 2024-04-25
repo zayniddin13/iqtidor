@@ -103,7 +103,7 @@
 }
 .toLeft {
   animation-name: toLeft;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-direction: alternate;
 }

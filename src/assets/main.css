@@ -30,6 +30,10 @@ body {
   height: 100%;
   margin: 0;
 }
+.content {
+  min-height: calc(100vh - 70px);
+  padding: 40px 40px 0 40px;
+}
 .conteiner {
   max-width: 1132px;
   width: 100%;

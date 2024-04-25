@@ -1,7 +1,7 @@
 <template>
   <div v-if="fetchDatas">
     <Transition name="fade" mode="out-in" class="duration-700 transition-all">
-      <div>
+      <div class="content">
         <CourseMainSection id="main-about" :slug="routes" />
         <CoursesSection :id="fetchDatas.id" />
         <ProgramsOfCourse :id="fetchDatas.id" />
