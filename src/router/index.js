@@ -43,14 +43,6 @@ const router = createRouter({
       component: CheckingCertificat,
     },
     {
-      path: "/valid-sertificate",
-      name: "ValidSertificate",
-      meta: {
-        layout: "default",
-      },
-      component: validSertificat,
-    },
-    {
       path: "/:path(.*)",
       name: "NotFoundComponent",
       meta: {
