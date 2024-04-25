@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-5 overflow-x-hidden mb-16">
+  <div class="relative z-5 overflow-x-hidden mb-16 overflow-y-hidden">
     <div id="main-about" class="conteiner relative">
       <div
         class="flex justify-between items-center gap-20 mt-14 max-[880px]:block relative"

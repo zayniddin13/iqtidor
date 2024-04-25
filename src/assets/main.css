@@ -7,7 +7,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 0;
+  height: 15px;
+}
 
+::-webkit-scrollbar-track-piece {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #ffff;
+}
 body {
   background: linear-gradient(152deg, #fff 10.15%, #f6f6f6 82.7%);
   font-family: "SF UI Display";
