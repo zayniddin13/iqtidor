@@ -182,7 +182,10 @@ function closeSuccesModal() {
   agree.value = false;
 }
 const postAplication = async () => {
-  if (!agree.value) {
+  if (
+    agree.value == true &&
+    (fullName.value == null || value.value == null || activeIndex.value == null)
+  ) {
     errorName.value = t("signUpCourse.complete");
     error.value = true;
     setTimeout(() => {

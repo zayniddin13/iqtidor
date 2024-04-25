@@ -1,5 +1,5 @@
 <template>
-  <div id="courses" ref="innerComponent" class="conteiner relative z-10 pb-16">
+  <div id="courses" class="conteiner relative z-10 pb-16">
     <div class="title font-bold leading-7 text-primaryBlue text-3xl mb-8">
       {{ $t("titles.courses") }}
     </div>
@@ -54,12 +54,4 @@ const fetchDataFromApi = async () => {
 onMounted(() => {
   fetchDataFromApi();
 });
-import VueScrollTo from "vue-scrollto";
-
-const router = useRouter();
-const scrollToMainComponent = () => {
-  VueScrollTo.scrollTo("#main-about", {
-    easing: "ease-in-out",
-  });
-};
 </script>

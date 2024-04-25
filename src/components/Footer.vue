@@ -1,5 +1,8 @@
 <template>
-  <div class="pt-16 pb-24 w-full bg-primaryBlue mt-12 relative bottom-0 left-0">
+  <div
+    id="footer"
+    class="pt-16 pb-24 w-full bg-primaryBlue mt-12 relative bottom-0 left-0"
+  >
     <div
       class="px-12 conteiner flex gap-10 relative z-10 max-[940px]:flex-wrap"
     >

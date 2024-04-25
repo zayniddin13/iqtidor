@@ -93,14 +93,7 @@
   animation-iteration-count: 1;
   animation-direction: alternate;
 }
-@keyframes toRight {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
+
 .toLeft {
   animation-name: toLeft;
   animation-duration: 1s;

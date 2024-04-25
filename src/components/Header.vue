@@ -204,6 +204,11 @@ import VueScrollTo from "vue-scrollto";
 const router = useRouter();
 
 const scrollToApplyComponent = () => {
+  VueScrollTo.scrollTo("#footer", {
+    easing: "ease-in-out",
+  });
+};
+const scrollToApply1Component = () => {
   VueScrollTo.scrollTo("#apply", {
     easing: "ease-in-out",
   });
@@ -217,7 +222,7 @@ const navigateToAplly = async () => {
     await router.push({ path: "/" });
     scrollToApplyComponent();
   } else {
-    scrollToApplyComponent();
+    scrollToApply1Component();
   }
 };
 const scrollToInnerComponent = () => {

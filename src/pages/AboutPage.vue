@@ -1,6 +1,6 @@
 <template>
   <Transition name="fade" mode="out-in">
-    <div class="content">
+    <div>
       <MainAbout id="main-about" />
       <CoursesSection id="courses" />
       <MentorsSection />

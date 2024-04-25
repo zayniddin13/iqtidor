@@ -25,15 +25,12 @@ html {
   margin: 0;
 }
 body {
-  background: linear-gradient(152deg, #fff 10.15%, #f6f6f6 82.7%);
+  background: #f6f6f6;
   font-family: "SF UI Display";
   height: 100%;
   margin: 0;
 }
-.content {
-  min-height: calc(100vh - 70px);
-  padding: 40px 40px 0 40px;
-}
+
 .conteiner {
   max-width: 1132px;
   width: 100%;
