@@ -210,7 +210,10 @@ const scrollToApplyComponent = () => {
 };
 
 const navigateToAplly = async () => {
-  if (route.path == "/about-page" || route.path == "/checking-certificate") {
+  if (route.path == "/about-page") {
+    await router.push({ path: "/" });
+    scrollToApplyComponent();
+  } else if (route.path == "/checking-certificate") {
     await router.push({ path: "/" });
     scrollToApplyComponent();
   } else {
