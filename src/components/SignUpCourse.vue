@@ -2,7 +2,7 @@
   <div id="apply" class="conteiner py-16">
     <div
       :class="error ? 'right-10' : '-right-[100%]'"
-      class="fixed top-10 px-4 py-3 rounded-md bg-yellow-in-light border-yellow-in-light text-white text-sm font-medium transition-all duration-500"
+      class="fixed z-50 top-10 px-4 py-3 rounded-md bg-yellow-in-light border-yellow-in-light text-white text-sm font-medium transition-all duration-500"
     >
       {{ errorName }}
       <div
